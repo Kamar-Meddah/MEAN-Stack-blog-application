@@ -5,7 +5,7 @@ class commentsTable extends table{
     constructor(){
         super();
         this.tab='comments';
-        this.db=this.db.model('comments',{name:"String",content:"String",articles_id:"ObjectId",date:{ type: Date, default: Date.now }})
+        this.db=this.db.model('comments',{name:"String",content:"String",articles_id:{ type: "ObjectId", index: true },date:{ type: Date, default: Date.now }})
     }
 
     find(id,cb){

@@ -4,7 +4,7 @@ class imagesTable extends table{
     constructor(){
         super();
         this.tab='images';
-        this.db=this.db.model('images',{name:"String",articles_id:"ObjectId"})
+        this.db=this.db.model('images',{name:"String",articles_id:{ type: "ObjectId", index: true }})
     }
 
    

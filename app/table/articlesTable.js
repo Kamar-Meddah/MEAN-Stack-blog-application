@@ -5,7 +5,7 @@ class articlesTable extends table{
     constructor(){
         super();
         this.tab='articles';
-        this.db=this.db.model(`${this.tab}`,{titre:'String',contenu:"String",category_id:"ObjectId",date:{ type: Date, default: Date.now }});
+        this.db=this.db.model(`${this.tab}`,{titre:'String',contenu:"String",category_id:{ type: "ObjectId", index: true },date:{ type: Date, default: Date.now }});
     }
 
     countByCategorie(id,cb){
