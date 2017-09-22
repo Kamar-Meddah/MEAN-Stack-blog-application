@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/img/icons/1.ico">
+    <link href="/node_modules/bootstrap-v4-dev/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/ez-alert.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/angular-confirm.min.css" rel="stylesheet">
+    <link href="/node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
+    <link href="/node_modules/tether/dist/css/tether.min.css" rel="stylesheet">
+    <link src="/node_modules/angular/angular-csp.css">
+    
+</head>
+
+<body ng-app="blog-v3">
+
+    <nav class="navbar navbar-toggleable-sm navbar-inverse  fixed-top" style="background-color:black">
+        <a class="navbar-brand" style="color:black">Bj</a>
+    </nav>
+
+    <ez-alert></ez-alert>
+    <div class="container"><ng-view></ng-view></div>
+
+    <br><br>
+    <!--                  Libs                   -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-route/angular-route.min.js "></script>
+    <script src="/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="js/libs/ez-alert.min.js"></script>
+    <script src="js/libs/ez-alert-tpl.js"></script>
+    <script src="/node_modules/angular-timeago/dist/angular-timeago-core.min.js"></script>
+    <script src="/node_modules/angular-timeago/dist/angular-timeago.min.js"></script>
+    <script src="/node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="/node_modules/bootstrap-v4-dev/dist/js/bootstrap.min.js"></script>
+    <script src="js/libs/angular-confirm.min.js "></script>
+    <script src="/node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="js/libs/tinymce/tinymce.min.js"></script>
+    <script src="js/libs/tinymce.min.js"></script>
+
+    <!--                  main                   -->
+    <script src="js/main/main.js "></script>
+    <script src="js/filtre/contenu.js"></script>
+    <!--                 directives                  -->
+    <script src="js/directive/Navbar.js"></script>
+    <script src="js/directive/NavbarAdmin.js"></script>
+    <!--                  Ctrls                   -->
+    <script src="js/controller/PostsCtrl.js "></script>
+    <script src="js/controller/PostCtrl.js "></script>
+    <script src="js/controller/PostCategorieCtrl.js "></script>
+    <script src="js/controller/PostsSearchCtrl.js "></script>
+    <script src="js/controller/UsersCtrl.js "></script>
+    <script src="js/controller/SearchCtrl.js "></script>
+
+    <script src="js/controller/admin/UserCtrl.js"></script>
+    <script src="js/controller/admin/categories/CategoriesCtrl.js"></script>
+    <script src="js/controller/admin/categories/CategoriesEditCtrl.js"></script>
+    <script src="js/controller/admin/posts/AdminPostsCtrl.js"></script>
+    <script src="js/controller/admin/posts/AdminPostsEditCtrl.js"></script>
+    <!--                  Services                  -->
+    <script src="js/service/PostsFactory.js "></script>
+    <script src="js/service/UserFactory.js "></script>
+    <script src="js/service/CategoriesFactory.js"></script>
+    <script src="js/service/ImagesFactory.js"></script>
+    <script src="js/service/CommentsFactory.js"></script>
+
+</body>
+
+</html>
