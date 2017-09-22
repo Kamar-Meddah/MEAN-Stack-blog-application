@@ -16,20 +16,8 @@ var MongooseStore = require('mongoose-express-session')(Store);
 
 mongoose.connect('mongodb://localhost:27017/blog', { useMongoClient: true});
 
-/*
-app.get('/',(req,res)=>{
+//middlewares
 
-    const articles=mongoose.model('articles',
-    {
-        titre:'String',contenu:"String",category_id:"ObjectId",date:{ type: Date, default: Date.now }
-     });
-
-    articles.find({"_id":"59c52839debf3a34e40ccf67"}).then(res=>{
-        console.log(res)
-    })
-})
-
-*/
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
@@ -42,10 +30,9 @@ app.use(session({
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
-
 app.use(express.static(__dirname+'/')); 
+
+//post Requests
 app.post('/',upload.array('images'),(req,res)=>{
  const string=req.body.request.split('.')
  const ctrl=require(`./app/controller/${string[0]}Ctrl`);
