@@ -21,7 +21,7 @@
     "express": "^4.16.0",
     "express-session": "^1.15.6",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "lightbox2": "^2.9.0",
     "mongoose": "^5.7.5",
     "mongoose-express-session": "0.0.5",
